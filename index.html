@@ -326,7 +326,7 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden">
+    <div class="backdrop">
       <div class="modal">
         <button class="modal-btn-close" type="button">Close</button>
         <h2>Замовити дзвінок</h2>
@@ -342,6 +342,7 @@
               id="user-name"
               name="user-name"
               placeholder="Ім'я"
+              required
             />
           </div>
 
@@ -354,6 +355,7 @@
               type="tel"
               id="user-tel"
               name="user-tel"
+              pattern="^\+[0-9]{12}"
               placeholder="Телефон"
             />
           </div>
@@ -370,6 +372,18 @@
               placeholder="Електронна пошта"
             />
           </div>
+
+          <!-- <div class="checkbox">
+            <input
+              class="checkbox-input visually-hidden"
+              type="checkbox"
+              id="terms-conditions"
+              name="terms-conditions"
+            />
+            <label class="checkbox-label" for="terms-conditions"
+              >Я точно погоджуюсь з політикою конфіденційності</label
+            >
+          </div> -->
 
           <button class="form-button button" type="submit">
             Замовити дзвінок
