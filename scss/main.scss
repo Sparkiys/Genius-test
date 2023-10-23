@@ -1,102 +1,12 @@
-/* poppins-300 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 300;
-  src: url('../fonts/poppins-v20-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* poppins-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* poppins-500 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/poppins-v20-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* poppins-600 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../fonts/poppins-v20-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* poppins-900 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 900;
-  src: url('../fonts/poppins-v20-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+@import './utils/fonts';
+@import './utils/variables';
+@import './base';
+@import './utils/utils';
 
-:root {
-  --color-primary-light: #faf4ea;
-  --color-primary-dark: #31261a;
-  --color-brand-normal: #819b57;
-  --color-brand-dark: #465929;
-  --color-brand-light: #cfcfbc;
-  --color-secondary-dark: #a18268;
-}
-
-/* Base */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  color: var(--color-primary-dark);
-  background-color: var(--color-primary-light);
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-}
-
-a {
-  display: inline-block;
-}
-
-address {
-  font-style: normal;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
+@import './components/buttons';
+@import './components/header';
+@import './components/hero-section';
+@import './components/links';
 
 .section {
   padding: 48px 0;
@@ -106,104 +16,6 @@ ul {
   width: 100%;
   max-width: 1288px;
   margin: 0 auto;
-}
-
-/* Button */
-.button {
-  padding: 16px 32px;
-  color: var(--color-primary-light);
-  font-weight: 600;
-  border: 2px solid var(--color-brand-normal);
-  background: var(--color-brand-normal);
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.button:hover {
-  color: var(--color-brand-dark);
-  background-color: transparent;
-}
-
-/* .button:disabled {
-  color: gray;
-  background: lightgray;
-  border-color: currentColor;
-  cursor: not-allowed;
-} */
-
-/* Link */
-.link {
-  color: var(--color-primary-light);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.link:hover {
-  color: var(--color-brand-normal);
-  /* text-decoration: underline; */
-}
-
-/* Header */
-
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 32px;
-}
-
-.header-conainer {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  gap: 40px;
-}
-
-.header-menu {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  gap: 64px;
-}
-
-/* Hero section */
-
-.hero-section {
-  padding: 272px 0;
-  background-image: linear-gradient(
-      103deg,
-      rgba(18, 18, 17, 0.78) 2.03%,
-      rgba(18, 18, 17, 0.6) 58.46%,
-      rgba(18, 18, 17, 0) 90.36%
-    ),
-    url('../images/hero-section-background.jpg');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-}
-
-.hero-title {
-  margin-bottom: 0;
-  color: var(--color-primary-light);
-  text-align: center;
-  font-size: 128px;
-  font-weight: 900;
-  /* font-style: italic; */
-  /* text-transform: capitalize; */
-  /* text-shadow: 5px 5px 4px yellow; */
-  /* letter-spacing: 10px; */
-  /* word-spacing: 40px; */
-}
-
-.hero-title .accent {
-  color: var(--color-brand-normal);
 }
 
 /* Advantages section */
@@ -354,6 +166,10 @@ ul {
 }
 
 .format-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 444px;
   padding: 24px;
   border-radius: 16px;
@@ -363,12 +179,20 @@ ul {
     rgba(49, 38, 26, 0.71) 72.92%,
     var(--color-primary-dark) 100%
   );
-  border: 1px solid lightgray; /* remove*/
   transition: transform 0.3s;
 }
 
 .format-card:hover {
   transform: scale(1.05);
+}
+
+.format-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .formats-title {
@@ -378,11 +202,13 @@ ul {
 .format-title {
   font-size: 24px;
   font-weight: 600;
+  color: var(--color-primary-light);
 }
 
 .format-text {
   font-size: 14px;
   font-weight: 300;
+  color: var(--color-primary-light);
 }
 
 /* Carousel */
