@@ -31,9 +31,19 @@
               <li><a class="link" href="#contact-section">Контакти</a></li>
             </ul>
           </nav>
-          <button class="button modal-btn-open" type="button">
+          <button class="header__button button modal-btn-open" type="button">
             Замовити дзвінок
           </button>
+          <button class="header__burger menu-btn-open" type="button">
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu">
+            <button class="mobile-menu__btn-close menu-btn-close" type="button">
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -43,6 +53,12 @@
           <h1 class="hero-section__title">
             <span class="text-brand">Сучасна</span> пекарня
           </h1>
+          <button
+            class="hero-section__button button modal-btn-open"
+            type="button"
+          >
+            Замовити дзвінок
+          </button>
         </div>
       </section>
       <section class="advantages-section">
@@ -83,13 +99,15 @@
               </p>
             </div>
             <img
-              src="images/baker-man.png"
+              class="traditions-section__image"
+              srcset="./images/baker-man.jpg 1x, ./images/baker-man@2x.jpg 2x"
+              src="./images/baker-man.jpg"
               alt="Чоловік пекар дивиться на батони із посмішкою"
             />
           </div>
         </div>
       </section>
-      <section class="chefs-section section" id="chefs-section">
+      <!-- <section class="chefs-section section" id="chefs-section">
         <div class="container">
           <h2
             class="chefs-section__title section__title section__title--centered"
@@ -142,8 +160,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="formats-section section" id="formats-section">
+      </section> -->
+      <!-- <section class="formats-section section" id="formats-section">
         <div class="container">
           <h2
             class="formats-section__title section__title section__title--centered"
@@ -216,8 +234,8 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="contact-section section" id="contact-section">
+      </section> -->
+      <!-- <section class="contact-section section" id="contact-section">
         <div class="container">
           <div class="contact-section__container">
             <div class="contact-section__form">
@@ -289,9 +307,9 @@
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer__container">
           <nav class="footer__nav">
@@ -317,7 +335,9 @@
                 >
               </li>
               <li>
-                <a class="footer__address__link" href="mailto:shopbakery@gmail.com"
+                <a
+                  class="footer__address__link"
+                  href="mailto:shopbakery@gmail.com"
                   >shopbakery@gmail.com</a
                 >
               </li>
@@ -348,16 +368,20 @@
               <a class="footer__address__link" href="#" target="_blank"
                 >Політика конфіденційності
               </a>
-              <p class="footer__address__copyright">&copy; 2022 Дані захищені</p>
+              <p class="footer__address__copyright">
+                &copy; 2022 Дані захищені
+              </p>
             </div>
           </address>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <div class="backdrop is-hidden">
       <div class="modal">
-        <button class="modal__btn-close modal-btn-close" type="button">Close</button>
+        <button class="modal__btn-close modal-btn-close" type="button">
+          Close
+        </button>
         <h2>Замовити дзвінок</h2>
         <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
         <form name="modal-form" autocomplete="off">
@@ -428,5 +452,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
